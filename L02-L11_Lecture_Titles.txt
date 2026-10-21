@@ -1,0 +1,253 @@
+L02  Mathematics for AI
+1. Scalar, Vector, Matrix, Tensor
+2. Transpose와 기본 벡터
+3. Linear Combination, Dot Product, Outer Product
+4. Matrix Multiplication vs. Element-wise Product
+5. Broadcasting과 Concatenation
+6. Linear Transformation과 Affine Transformation
+7. Eigenvalue와 Eigenvector
+8. Norms
+9. Cosine Similarity
+10. Determinant
+11. Softmax Function
+12. Conditional Probability와 Joint Probability
+13. Marginal Probability와 Law of Total Probability
+14. Bayes' Theorem
+15. Expectation
+16. Variance와 Covariance
+
+L03  Linear Regression
+1. 데이터 살펴보기
+2. 최소제곱법으로 최적의 직선 구하기
+3. 예측 오차 측정하기
+4. 손실 함수의 모양 살펴보기
+5. 경사하강법으로 파라미터 학습하기
+6. 입력 변수가 여러 개인 경우
+7. TensorFlow/Keras로 같은 문제 풀기
+8. 사용자 정의 손실 함수 만들기
+
+L04  Logistic Regression
+1. Regression vs. Classification
+2. 분류 label과 확률 출력
+3. Softmax: scores를 probabilities로 바꾸기
+4. Binary Classification Example
+5. 왜 Sigmoid가 필요한가?
+6. Binary Cross Entropy (BCE)
+7. Logistic Regression 직접 학습하기
+8. Keras로 Binary Logistic Regression 구현하기
+9. Multiclass Classification
+10. Keras Softmax Output 예제
+11. Entropy
+12. Cross Entropy
+13. Confusion Matrix
+14. Accuracy, Precision, Recall, F1 Score
+15. Classification Threshold
+16. Imbalanced Data
+
+L05  Neural Networks
+1. 하나의 Neuron
+2. Activation Function
+3. Neuron을 여러 개 연결하면 MLP
+4. Hidden Layer는 새로운 표현을 만든다: XOR
+5. Loss는 "얼마나 틀렸는가"
+6. Gradient를 먼저 직관적으로 이해하기
+7. 미분 없이 Gradient를 추정해 보기
+8. 가장 작은 Backpropagation 예제
+9. Gradient Descent로 한 번 Update
+10. Activation Function이 들어가면 한 단계만 더 곱한다
+11. 우리가 계산한 Gradient가 맞는지 확인하기
+12. 먼저 Scalar Network로 생각하기
+13. Output Layer부터 Backward
+14. Hidden Layer로 계속 Backward
+15. 모든 Parameter는 Gradient 계산 후 함께 Update
+16. 같은 과정을 여러 번 반복하면 Training
+17. 실제 Neural Network에서는 같은 계산을 동시에 수행한다
+18. TensorFlow는 Backpropagation을 자동으로 계산한다
+19. Keras에서는 더 많은 부분을 자동화한다
+20. Backpropagation은 derivative를 반복해서 곱한다
+
+L06-01  Binary Classification — Pima Diabetes
+1. 데이터 불러오기
+2. Label Balance 확인
+3. Feature Statistics 확인
+4. Correlation Matrix 확인
+5. Correlation Heatmap
+6. Feature Distribution 확인
+7. Binary Classification Model 구성
+8. Model Fitting
+
+L06-02  Multiclass Classification — Iris
+1. Iris Dataset 불러오기
+2. Feature Relationship 시각화
+3. Data와 Label 준비
+4. Multiclass Classification Model 구성
+5. Model Training
+
+L06-03  Validation, Overfitting, and Early Stopping — Wine
+1. Dataset Split 및 기본 모델 학습
+2. Model 저장하기
+3. ModelCheckpoint 사용하기
+4. History Object 확인
+5. Overfitting을 관찰하기 위한 긴 학습
+6. Learning Curves 시각화
+7. Early Stopping
+8. Best Model 저장 + Early Stopping
+9. Best Model 불러오기 및 Test Evaluation
+
+L07  Loss Functions
+1. Bernoulli Distribution으로 MLE 이해하기
+2. Likelihood, Log-Likelihood, NLL
+3. 왜 Log-Likelihood를 사용하는가?
+4. Task에 따라 Likelihood가 달라진다
+5. MAE와 MSE 비교
+6. Cosine Similarity를 Loss로 사용하기
+7. Binary Cross Entropy (BCE)
+8. Categorical Cross Entropy (CCE)
+9. Kullback-Leibler (KL) Divergence
+10. Keras Loss Object 직접 사용하기
+11. 여러 Loss를 결합하기
+12. Loss Weight의 영향
+
+L08  Training Neural Networks
+1. Lecture 8의 작은 Regression Dataset
+2. Loss와 Gradient
+3. Full-Batch Gradient Descent
+4. Mini-Batch SGD
+5. Momentum
+6. Adam
+7. Learning Rate가 너무 작거나 크면?
+8. Learning Rate Scheduling
+9. 왜 Initialization이 중요한가?
+10. Zero Initialization
+11. Layer별 Activation Scale 측정
+12. Small Random Initialization + `tanh`
+13. Large Random Initialization + `tanh`
+14. Xavier Initialization + `tanh`
+15. Xavier Initialization + `ReLU`
+16. He Initialization + `ReLU`
+17. Initialization 비교
+
+L09  Stabilizing Neural Network Training
+1. Activation Functions 비교
+2. Sigmoid와 Vanishing Gradient
+3. Sigmoid는 Zero-Centered가 아니다
+4. ReLU와 Dying ReLU
+5. Leaky ReLU
+6. Activation Functions in Keras
+7. Normalization vs. Standardization
+8. Zero-Centering과 Scaling 시각화
+9. Train과 Test에서는 어떻게 Scaling해야 할까?
+10. MNIST Input Scaling
+11. Input Scaling vs. Activation Normalization
+12. Mini-Batch Matrix Representation
+13. BatchNorm Step 1 — Neuron-wise Standardization
+14. BatchNorm Step 2 — Learnable Scaling and Shifting
+15. Training Time과 Test Time
+16. Batch Normalization in Keras
+17. 직접 해보기 — BatchNorm을 제거하면?
+18. BatchNorm과 LayerNorm의 차이
+19. Layer Normalization in Keras
+
+L10  Regularization
+1. Train / Validation / Test의 역할
+2. Learning Curve에서 Overfitting 찾기
+3. Model Capacity: Too Simple vs. Too Complex
+4. Regularization vs. Normalization
+5. Regularized Objective
+6. L1과 L2 Regularization
+7. Lecture 예제로 L2 Regularization 효과 확인
+8. Lasso vs. Ridge: Coefficient 변화
+9. 왜 Scaling이 중요한가?
+10. Regularization Strength와 Bias–Variance
+11. L2 Regularization과 Weight Decay
+12. AdamW 코드
+13. Dropout의 핵심 아이디어
+14. NumPy로 Dropout Mask 확인하기
+15. Keras Dropout
+16. Training과 Inference에서 Dropout 차이 확인
+17. Data Augmentation의 목적
+18. MNIST Image Augmentation
+19. Augmented Image 직접 확인
+20. Augmentation을 사용한 CNN Training
+21. 간단한 Time-Series Augmentation
+
+L11-01  Ames Housing Regression
+1. 실습 환경 설정
+2. 데이터 불러오기와 기본 확인
+3. Feature와 Target 분리
+4. Missing Value 처리
+5. Categorical Encoding과 Numerical Standardization
+6. Target Scaling
+7. 공통 Model / Training / Evaluation 함수
+8. Experiment 1 — Baseline MLP
+9. Experiment 2 — Batch Normalization
+10. Experiment 3 — Weight Decay with AdamW
+11. Experiment 4 — Dropout Rate 비교
+12. Experiment 5 — Dropout + Learning-Rate Scheduling
+13. 선택 실습 — Log-Transformed Target
+14. 선택 실습 — Top-K Feature Selection
+15. 선택 실습 — Smaller MLP
+16. 최종 비교
+
+L11-02  ETTh1 Univariate Direct Forecasting
+1. 실습 환경 설정
+2. ETTh1 데이터 불러오기
+3. Chronological Split, Scaling, Window 생성
+4. Naive Baseline
+5. MLP와 Training 함수
+6. 참고 실험
+7. Single-Seed Screening
+8. 선택 실습 — Repeated-Seed Confirmation
+9. Test 성능과 Naive Baseline 비교
+10. Forecast 예제 시각화
+11. 선택 실습 — Multivariate 결과와 비교
+12. 결과와 Model 저장
+
+L11-03  ETTh1 Univariate Residual Forecasting
+1. Forecasting Formulation
+2. 실습 환경 설정
+3. ETTh1 데이터 불러오기
+4. Chronological Split과 Scaling
+5. Boundary-Aware Sliding Window
+6. Window Alignment 확인
+7. Anchor와 Residual Target 만들기
+8. Naive Baseline
+9. 공통 MLP
+10. Model Training
+11. Test 성능 평가
+12. Baseline을 포함한 최종 비교
+13. Anchor 대비 성능 향상
+14. Learning Curve
+15. Forecast 시각화
+16. Horizon별 MAE
+17. 결과와 Validation-Selected Model 저장
+
+L11-04  MLP for Forward Kinematics
+1. 라이브러리와 Colab 환경 설정
+2. Google Drive 마운트와 데이터 불러오기
+3. Input과 Target 설정
+4. Train / Validation / Test 분할
+5. Input / Output Standardization
+6. MLP Model
+7. Early Stopping과 Model Training
+8. Learning Curve 확인
+9. Test Evaluation and Prediction
+10. Output별 MAE
+11. Prediction 시각화
+12. Model과 Scaler 저장
+13. 저장한 Model로 한 Sample 예측
+
+L11-05  MLP for Inverse Kinematics
+1. 라이브러리와 Colab 환경 설정
+2. Google Drive 마운트와 데이터 불러오기
+3. Input과 Target 설정
+4. Train / Validation / Test 분할
+5. Input / Output Standardization
+6. MLP Model
+7. Early Stopping과 Model Training
+8. Learning Curve 확인
+9. Test Evaluation and Prediction
+10. Joint별 MAE
+11. q1 Prediction 시각화
+12. Model과 Scaler 저장
+13. 저장한 Model로 새로운 Pose 예측
